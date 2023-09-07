@@ -33,6 +33,26 @@ Put in your environment variable `TURBOBIT_API` like you can see in .env file
 Alternatively you can pass the key when class is initialized
 
 
+### Main classes
+
+#### FileManager
+
+_file: FileManager.py_
+
+Contains functions for working with files and folders. All work with files and folders through the API is done with this class.
+
+#### Remote
+
+_file: Remote.py_
+
+Contains functions to work with remote uploading of files.
+
+#### UploadFile
+
+_file: Upload.py_
+
+The main class for uploading files to turbobit via API
+
 
 ## Changelog
 
