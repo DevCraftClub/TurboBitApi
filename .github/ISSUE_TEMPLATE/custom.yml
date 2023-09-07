@@ -1,0 +1,50 @@
+name: Other issues / Другие запросы
+description: If you don't know where to put your issue / Если не знаешь куда и где и что оформлять, то этот тикет для тебя
+title: "[OTHER]: "
+labels:
+    - other
+    - dont_know_where
+assignees:
+    - Gokujo
+body:
+    -   type: markdown
+        attributes:
+            value: |
+                  Thank you that you took your time for applying this form / Спасибо, что нашли время, чтобы составить этот отчёт
+    -   type: checkboxes
+        id: read-rules
+        attributes:
+            label: Пользовательское соглашение
+            description: You have to read the agreement and translate it to your language from the [site](https://devcraft.club/pages/licence-agreement/) / Перед просьбой добавить или "починить" что-либо в срочном порядке - [нужно прочесть соглашение](https://devcraft.club/pages/licence-agreement/).
+            options:
+                -   label: I read the agreement / Я прочёл / прочла соглашение и согласен / согласна с ними
+                    required: true
+    -   type: textarea
+        id: what-do-you-need
+        attributes:
+            label: What's up? / В чём соль?
+            description: Please tell me as detailed as you can what do you want / Если можно, то пожалуйста, опиши то, что хочешь. Если можно пошагово и как можно детальней
+            placeholder: I want to... but I don't know what... / Я хочу, но не знаю что...
+            value: "My problem or my feature request / Моя хотелка или проблемка!"
+        validations:
+            required: true
+    -   type: dropdown
+        id: python-version
+        attributes:
+            label: Python version / Версия Python
+            description: Which python version do you use in your environment? / Какую версию питон используешь в окружении разработки?
+            options:
+                - "3.10 (Default)"
+                - "3.9"
+                - "<= 3.8"
+        validations:
+            required: true
+    -   type: textarea
+        id: "screenshots"
+        attributes:
+            label: Screenshots / Скриншоты
+            description: If you can take some screenshots / Если есть возможность, добавь скриншоты преступления
+            value: |
+                ![DESCRIPTION](LINK.png)
+        validations:
+            required: false

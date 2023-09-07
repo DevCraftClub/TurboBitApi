@@ -1,0 +1,66 @@
+name: Error / Bug / Ошибка
+description: Tell me about your bug / Сообщить об ошибке / баге
+title: "[BUG]: "
+labels:
+    - Ошибка
+    - bug
+assignees:
+    - Gokujo
+body:
+    -   type: markdown
+        attributes:
+            value: |
+                Thank you that you took your time for applying this form / Спасибо, что нашли время, чтобы составить этот отчёт
+    -   type: checkboxes
+        id: read-rules
+        attributes:
+            label: User agreement (Russian) / Пользовательское соглашение
+            description: You have to read the agreement and translate it to your language from the [site](https://devcraft.club/pages/licence-agreement/) / Перед просьбой добавить или "починить" что-либо в срочном порядке - [нужно прочесть соглашение](https://devcraft.club/pages/licence-agreement/).
+            options:
+                -   label: I read the agreement / Я прочёл / прочла соглашение и согласен / согласна с ними
+                    required: true
+    -   type: textarea
+        id: what-happened
+        attributes:
+            label: What's the problem? / В чём проблема?
+            description: Please give me as much as detailed information about your issue / Если можно, то пожалуйста, опиши проблему в деталях и то, как до неё добраться. Если можно пошагово
+            placeholder: I am the problem and that is the description / Я - проблема, и вот моё описание
+            value: "Error occured / Проблемка нарисовалась!"
+        validations:
+            required: true
+    -   type: textarea
+        id: what-should-happen
+        attributes:
+            label: What should happen? / Что ожидали?
+            description: What in your opinion should have happened? / Что по твоему должно было произойти?
+            placeholder: It should have worked / Чтобы всё решилось, а не всё это
+            value: "In awaiting of miracle / В ожидании чуда"
+        validations:
+            required: false
+    -   type: input
+        id: plugin-version
+        attributes:
+            label: App version / Версия плагина
+            description: Tell the current app version / Напиши версию плагина
+        validations:
+            required: true
+    -   type: dropdown
+        id: python-version
+        attributes:
+            label: Python version / Версия Python
+            description: Which python version do you use in your environment? / Какую версию питон используешь в окружении разработки?
+            options:
+                - "3.10 (Default)"
+                - "3.9"
+                - "<= 3.8"
+        validations:
+            required: true
+    -   type: textarea
+        id: "screenshots"
+        attributes:
+            label: Screenshots / Скриншоты
+            description: If you can take some screenshots / Если есть возможность, добавь скриншоты преступления
+            value: |
+                ![DESCRIPTION](LINK.png)
+        validations:
+            required: false
