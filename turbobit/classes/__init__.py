@@ -20,12 +20,14 @@ from turbobit.responses.UploadUrlResponse import UploadUrlResponse
 class Connect:
 	api_key: Optional[str] = None
 
-	def __init__(self):
+	def __init__(self, api_key: Optional[str] = None):
 		"""
 		The __init__ function is called when the class is instantiated. It automatically receives the TURBOBIT_API variable from environment.
+
+		Or put in every class the API key on init
 		"""
 		load_dotenv(dotenv_path=Path(ENV_FILE))
-		self.api_key = os.environ.get('TURBOBIT_API')
+		self.api_key = api_key or os.environ.get('TURBOBIT_API')
 
 	def send_request(self, url: str, type_request: str = 'GET', data: Optional[dict] = None, json_data: Optional[dict] = None,
 	                 parameters: Optional[dict] = None, files: Optional[dict] = None, headers: Optional[dict] = None) ->\
