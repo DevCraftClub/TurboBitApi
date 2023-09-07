@@ -10,7 +10,7 @@ setup(
     url="https://github.com/DevCraftClub/TurboBitApi",
     author="Maxim Harder",
     author_email="dev@devcraft.club",
-    packages=["turbobit_api"],
+    packages=["turbobit"],
     install_requires=[
         "requests",
         "python-dotenv",
