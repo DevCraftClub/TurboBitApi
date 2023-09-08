@@ -26,6 +26,13 @@ Or
 my_var = selectedClass("API Key")
 ```
 
+Or
+
+```python3
+my_var = selectedClass()
+my_var.api_key = "YOUR API KEY"
+```
+
 ### Variables
 
 Put in your environment variable `TURBOBIT_API` like you can see in .env file
